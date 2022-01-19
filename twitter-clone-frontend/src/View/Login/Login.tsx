@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Icon, Button } from "../../Components";
 import Input from "../../Components/Input";
+import { apiTwitter } from "../../Services/api";
 
 import "./styles.scss";
 
@@ -11,6 +12,18 @@ const Login = () => {
   useEffect(() => {
     console.log(email, password);
   }, [email, password]);
+
+  const handleLogin = async () => {
+    try {
+      const response = await apiTwitter.post("sessions", {
+        email: email,
+        password: password,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <main className="Login">
       <div>
@@ -45,7 +58,7 @@ const Login = () => {
           <Input onChange={setEmail} placeholder="email" />
           <Input onChange={setPassword} placeholder="password" />
 
-          <Button text="Next" />
+          <Button text="Next" onClick={handleLogin} />
         </div>
       </div>
     </main>
