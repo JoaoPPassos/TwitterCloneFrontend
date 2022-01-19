@@ -23,3 +23,11 @@ code {
     url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
     url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "Google Sans";
+  src: local("Google Sans"),
+    url("Assets/Font/googleSans/ProductSans-Regular.woff") format("woff");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}

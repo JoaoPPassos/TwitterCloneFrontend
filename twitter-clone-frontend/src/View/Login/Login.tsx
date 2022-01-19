@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Icon, Button } from "../../Components";
+import Input from "../../Components/Input";
 
 import "./styles.scss";
 
 const Login = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  useEffect(() => {
+    console.log(email, password);
+  }, [email, password]);
   return (
     <main className="Login">
       <div>
@@ -22,7 +29,23 @@ const Login = () => {
 
           <h2>Sign in to Twitter</h2>
 
-          <Button text="Sign in with Google" />
+          <Button
+            text="Sign in with Google"
+            icon={
+              <img src="https://img.icons8.com/fluency/18/000000/google-logo.png" />
+            }
+          />
+          <Button
+            text="Sign in with Apple"
+            icon={
+              <img src="https://img.icons8.com/ios-glyphs/18/000000/mac-os.png" />
+            }
+          />
+          <div>or</div>
+          <Input onChange={setEmail} placeholder="email" />
+          <Input onChange={setPassword} placeholder="password" />
+
+          <Button text="Next" />
         </div>
       </div>
     </main>
