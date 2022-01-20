@@ -1,0 +1,70 @@
+$borderColor: #2f3336;
+$borderFocusColor: #3788c5;
+
+.Input {
+  width: 17rem;
+  height: 3.5rem;
+  border: 0.5px solid $borderColor;
+  border-radius: 4px;
+
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+
+  &.hover {
+    border: 1px solid $borderFocusColor;
+
+    & .Input_Placeholder {
+      height: 1.5rem;
+      color: $borderFocusColor;
+      font-size: 10px;
+
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+    }
+    > input {
+      display: initial;
+    }
+  }
+
+  &_Placeholder {
+    height: 100%;
+
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+
+    font-size: 17px;
+    font-family: TwitterChirp;
+    font-style: 100;
+    font-weight: 400;
+    line-height: 24px;
+    color: #6e767d;
+
+    display: flex;
+    align-items: center;
+    justify-items: left;
+
+    padding: 0 8px;
+  }
+
+  > input {
+    display: none;
+    background-color: transparent;
+    width: 95%;
+    border: none;
+    color: white;
+    outline: none;
+    padding-left: 8px;
+
+    font-size: 17px;
+    font-family: TwitterChirp;
+    font-style: 100;
+    font-weight: 400;
+    color: white;
+  }
+}

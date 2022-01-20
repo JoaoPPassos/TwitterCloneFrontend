@@ -7,6 +7,7 @@ interface ButtonProps {
   onClick?: () => void;
   variant?: string;
   icon?: ReactNode;
+  outline?: boolean;
 }
 
 const Button = ({
@@ -14,10 +15,14 @@ const Button = ({
   onClick,
   variant = "",
   icon,
-}: ButtonProps) => {
+  outline = false,
+  ...props
+}: ButtonProps & React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
-      className={`Button ${variant !== "" ? variant : "primary"}`}
+      className={`Button ${variant !== "" ? variant : "primary"} ${
+        outline ? "outlined" : ""
+      }`}
       onClick={onClick}
     >
       <div className="Button_Content">

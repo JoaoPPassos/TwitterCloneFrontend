@@ -31,3 +31,11 @@ code {
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
+
+@font-face {
+  font-family: "TwitterChirp";
+  src: local("TwitterChirp"),
+    url("Assets/Font/twitter/twitterchirp.ttf") format("truetype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}

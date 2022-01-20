@@ -20,11 +20,11 @@ $secondLayerColor: #5b708366;
     background-color: $baseColor;
     border-radius: 16px;
     width: 60em;
-    height: 62em;
+    height: 59em;
 
     display: block;
 
-    &_Header {
+    &__Header {
       padding: 16px;
       position: relative;
       height: 3.2em;
@@ -55,6 +55,15 @@ $secondLayerColor: #5b708366;
         display: flex;
         justify-content: center;
       }
+    }
+
+    &__Body {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+
+      row-gap: 24px;
     }
   }
 }

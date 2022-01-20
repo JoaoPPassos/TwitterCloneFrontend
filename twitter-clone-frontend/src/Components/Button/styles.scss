@@ -3,10 +3,19 @@
   height: 2rem;
   border-radius: 30px;
 
+  cursor: pointer;
+
   &.primary {
     background-color: white;
 
     transition: 0.3s;
+
+    &.outlined {
+      background-color: black !important;
+      border: 0.5px solid rgb(83, 100, 113);
+      color: white;
+    }
+
     &:hover {
       background-color: rgb(230, 230, 230);
     }
