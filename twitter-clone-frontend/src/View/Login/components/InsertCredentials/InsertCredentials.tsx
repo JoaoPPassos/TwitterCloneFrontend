@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import { Button } from "../../../../Components";
 import Input from "../../../../Components/Input";
 
+import "./styles.scss";
 interface CredentialsProps {
   email: string;
   setter: (password: any) => void;
@@ -15,13 +16,22 @@ const InsertCredentials = ({
   ...props
 }: CredentialsProps & React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div {...props}>
-      <h2>Enter your password</h2>
+    <div {...props} className="InsertCredentials">
+      <h1 className="InsertCredentials_Title">Enter your password</h1>
 
-      <Input placeholder={email} readonly={true} />
-      <Input onChange={setter} placeholder={"Password"} />
+      <div className="InsertCredentials_Inputs">
+        <Input placeholder={email} readonly={true} key="email" />
+        <Input
+          onChange={setter}
+          placeholder={"Password"}
+          password={true}
+          key="password"
+        />
+      </div>
 
-      <Button text="Log in" onClick={handleLogin} />
+      <div className="InsertCredentials_Button">
+        <Button text="Log in" onClick={handleLogin} />
+      </div>
     </div>
   );
 };

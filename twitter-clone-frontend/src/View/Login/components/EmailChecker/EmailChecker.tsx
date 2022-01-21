@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "../../../../Components";
-import Input from "../../../../Components/Input";
+import { Button, Input, Separator } from "../../../../Components";
 import { apiTwitter } from "../../../../Services/api";
+
+import "./style.scss";
 
 interface EmailCheckerProps {
   setter: (email: any) => void;
@@ -22,33 +23,48 @@ const handleEmailCheck = async (email: string, handle: () => void) => {
 const EmailChecker = ({ setter, email, handleChecker }: EmailCheckerProps) => {
   return (
     <>
-      <h2>Sign in to Twitter</h2>
+      <div className="EmailChecker_Title">
+        <h1>Sign in to Twitter</h1>
+      </div>
 
-      <Button
-        text="Sign in with Google"
-        icon={
-          <img src="https://img.icons8.com/fluency/18/000000/google-logo.png" />
-        }
-      />
-      <Button
-        text="Sign in with Apple"
-        icon={
-          <img src="https://img.icons8.com/ios-glyphs/18/000000/mac-os.png" />
-        }
-      />
-      <div>or</div>
-      <Input onChange={setter} placeholder="Phone, email, or username" />
+      <div className="EmailChecker_Button">
+        <Button
+          text="Sign in with Google"
+          icon={
+            <img src="https://img.icons8.com/fluency/18/000000/google-logo.png" />
+          }
+        />
+      </div>
+      <div className="EmailChecker_Button">
+        <Button
+          text="Sign in with Apple"
+          icon={
+            <img src="https://img.icons8.com/ios-glyphs/18/000000/mac-os.png" />
+          }
+        />
+      </div>
+
+      <div className="SeparatorDiv">
+        <Separator text="or" />
+      </div>
+      <div className="EmailChecker_Input">
+        <Input onChange={setter} placeholder="Phone, email, or username" />
+      </div>
       {/* <Input onChange={setPassword} placeholder="password" /> */}
 
-      <Button
-        text="Next"
-        onClick={() => handleEmailCheck(email, handleChecker)}
-      />
-      <Button
-        text="Forgot Password?"
-        outline={true}
-        //onClick={() => handleEmailCheck(email, handleChecker)}
-      />
+      <div className="EmailChecker_Button">
+        <Button
+          text="Next"
+          onClick={() => handleEmailCheck(email, handleChecker)}
+        />
+      </div>
+      <div className="EmailChecker_Button">
+        <Button
+          text="Forgot Password?"
+          outline={true}
+          //onClick={() => handleEmailCheck(email, handleChecker)}
+        />
+      </div>
     </>
   );
 };

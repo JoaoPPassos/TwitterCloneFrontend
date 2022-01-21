@@ -3,6 +3,7 @@ import { Icon, Button } from "../../Components";
 import Input from "../../Components/Input";
 import { apiTwitter } from "../../Services/api";
 import { EmailChecker, InsertCredentials } from "./components";
+import TwitterIcon from "../../Assets/Images/twitter.png";
 
 import "./styles.scss";
 
@@ -34,7 +35,7 @@ const Login = () => {
             </div>
             <div className="Login_Container__Header--Logo">
               <img
-                src="https://www.seekpng.com/png/detail/91-917407_vector-twitter-white-icon-png.png"
+                src={TwitterIcon}
                 alt="Vector - Twitter White Icon Png@seekpng.com"
               />{" "}
             </div>

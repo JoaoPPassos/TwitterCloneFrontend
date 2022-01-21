@@ -22,7 +22,8 @@ $secondLayerColor: #5b708366;
     width: 60em;
     height: 59em;
 
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     &__Header {
       padding: 16px;
@@ -59,11 +60,14 @@ $secondLayerColor: #5b708366;
 
     &__Body {
       display: flex;
-      flex-direction: column;
-      justify-items: center;
-      align-items: center;
+      flex: 2;
 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       row-gap: 24px;
+
+      padding: 1rem 2rem;
     }
   }
 }

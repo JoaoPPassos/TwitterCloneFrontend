@@ -1,0 +1,27 @@
+.InsertCredentials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  &_Title {
+    color: #f8f8f8;
+  }
+
+  &_Inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &_Button {
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    height: 3rem;
+  }
+}
