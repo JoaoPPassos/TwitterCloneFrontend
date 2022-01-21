@@ -1,0 +1,20 @@
+.Separator {
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &_Text {
+    height: 1.6rem;
+    font-size: 16px;
+  }
+
+  &_Line {
+    flex-grow: 1;
+    border: 0.05px solid rgb(211, 211, 211);
+  }
+}
